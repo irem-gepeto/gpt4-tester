@@ -1,7 +1,9 @@
 import openai
 import os  
 
-openai.api_key = ""
+api_key = os.environ.get("OPENAI_API_KEY")
+
+openai.api_key = api_key
 
 message = [{"role":"user", "content":"tell me a joke about turkey"}] 
 

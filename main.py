@@ -10,7 +10,8 @@ message = [{"role":"user", "content":"tell me a joke about turkey"}]
 response = openai.ChatCompletion.create(
     model = "gpt-4",
     messages = message, 
-    max_tokens = 300
+    max_tokens = 300, 
+    temperature = 1
 )
 
 print(response["choices"][0]["message"]["content"])
